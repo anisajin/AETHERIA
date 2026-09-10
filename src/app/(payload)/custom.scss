@@ -1,0 +1,178 @@
+/* -------------------------------------------------------------
+   AETHERIA ARCANUM - PAYLOAD CMS ADMIN THEME & HIGH CONTRAST FIX
+   ------------------------------------------------------------- */
+
+/* High-contrast Dark Theme Variables */
+[data-theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"] {
+  --theme-elevation-0: #070612 !important;
+  --theme-elevation-50: #0d0b1a !important;
+  --theme-elevation-100: #141026 !important;
+  --theme-elevation-150: #1c1634 !important;
+  --theme-elevation-200: #251e44 !important;
+  --theme-elevation-250: #2f2756 !important;
+  --theme-elevation-300: #3b316a !important;
+  --theme-elevation-400: #493d82 !important;
+  --theme-elevation-500: #594a9e !important;
+
+  /* Explicit Crystal Clear Text Colors */
+  --theme-text: #ffffff !important;
+  --theme-text-muted: #cbd5e1 !important;
+  --theme-text-dim: #94a3b8 !important;
+
+  --theme-accent: #f6c564 !important;
+  --theme-accent-hover: #ffdf8d !important;
+  
+  --theme-border: rgba(168, 85, 247, 0.25) !important;
+  --theme-border-subtle: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* Ensure clean, crisp light mode when light theme is active */
+[data-theme="light"],
+html[data-theme="light"],
+body[data-theme="light"] {
+  --theme-elevation-0: #ffffff !important;
+  --theme-elevation-50: #f8fafc !important;
+  --theme-elevation-100: #f1f5f9 !important;
+  --theme-elevation-150: #e2e8f0 !important;
+  --theme-elevation-200: #cbd5e1 !important;
+
+  --theme-text: #0f172a !important;
+  --theme-text-muted: #475569 !important;
+  --theme-text-dim: #64748b !important;
+
+  --theme-accent: #b45309 !important;
+  --theme-accent-hover: #d97706 !important;
+}
+
+/* -------------------------------------------------------------
+   GLOBAL TEXT & CONTRAST ENHANCEMENTS FOR PAYLOAD CMS
+   ------------------------------------------------------------- */
+
+/* Table cells, headers, and rows */
+.table,
+.table-row,
+.cell,
+.table th,
+.table td,
+.collection-list__table td,
+.collection-list__table th {
+  color: var(--theme-text) !important;
+}
+
+[data-theme="dark"] .table th,
+[data-theme="dark"] .collection-list__table th {
+  color: #f6c564 !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.05em !important;
+  background-color: #120e28 !important;
+}
+
+[data-theme="dark"] .table td,
+[data-theme="dark"] .collection-list__table td {
+  color: #f1f5f9 !important;
+}
+
+[data-theme="dark"] .table-row:hover td {
+  background-color: #1b1536 !important;
+}
+
+/* Form labels, field descriptions, inputs */
+.field-type label,
+.field-label,
+label {
+  font-weight: 600 !important;
+  letter-spacing: 0.02em !important;
+}
+
+[data-theme="dark"] .field-type label,
+[data-theme="dark"] .field-label,
+[data-theme="dark"] label {
+  color: #ffdf8d !important;
+}
+
+[data-theme="dark"] .field-description {
+  color: #94a3b8 !important;
+}
+
+/* Input Fields */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="password"],
+[data-theme="dark"] input[type="number"],
+[data-theme="dark"] textarea,
+[data-theme="dark"] select,
+[data-theme="dark"] .rs__control {
+  background-color: #0d0b1a !important;
+  color: #ffffff !important;
+  border-color: rgba(168, 85, 247, 0.35) !important;
+}
+
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus,
+[data-theme="dark"] .rs__control--is-focused {
+  border-color: #f6c564 !important;
+  box-shadow: 0 0 12px rgba(246, 197, 100, 0.3) !important;
+}
+
+/* Sidebar navigation links */
+[data-theme="dark"] .nav a,
+[data-theme="dark"] .nav__link,
+[data-theme="dark"] .sidebar a {
+  color: #e2e8f0 !important;
+  font-weight: 500 !important;
+}
+
+[data-theme="dark"] .nav a:hover,
+[data-theme="dark"] .nav__link:hover,
+[data-theme="dark"] .nav__link--active {
+  color: #f6c564 !important;
+  background-color: rgba(246, 197, 100, 0.1) !important;
+}
+
+[data-theme="dark"] .nav-group__toggle {
+  color: #cbd5e1 !important;
+  font-weight: 700 !important;
+}
+
+/* Breadcrumbs & View Titles */
+[data-theme="dark"] .step-nav,
+[data-theme="dark"] .view-description,
+[data-theme="dark"] .doc-header__title {
+  color: #ffffff !important;
+}
+
+/* Status Badges / Pills */
+.pill,
+.status-pill {
+  font-weight: 600 !important;
+  padding: 4px 10px !important;
+  border-radius: 20px !important;
+}
+
+/* Primary Action & Publish Buttons */
+.btn--style-primary,
+button[type="submit"],
+.action-button--publish {
+  background: linear-gradient(135deg, #ffdf8d 0%, #f6c564 50%, #d49826 100%) !important;
+  color: #070612 !important;
+  font-weight: 700 !important;
+  border: 1px solid rgba(255, 255, 255, 0.4) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 2px 10px rgba(246, 197, 100, 0.35) !important;
+}
+
+.btn--style-primary:hover,
+.action-button--publish:hover {
+  background: linear-gradient(135deg, #fff2c4 0%, #ffdf8d 50%, #f6c564 100%) !important;
+  box-shadow: 0 4px 16px rgba(246, 197, 100, 0.6) !important;
+}
+
+/* Save Draft Button */
+.action-button--draft,
+.btn--style-secondary {
+  border: 1px solid rgba(168, 85, 247, 0.45) !important;
+  color: var(--theme-text) !important;
+}
